@@ -10,8 +10,9 @@ namespace ApiSpeedUp.Controllers
     [Route("api/[controller]")]
     public class ApiSpeedController : ControllerBase
     {
-        public readonly travelDbContext dbcontext;
-        public IApiRep apiRep { get; set; }
+
+        private readonly travelDbContext dbcontext;
+        private IApiRep apiRep { get; set; }
         public ApiSpeedController(travelDbContext dbcontext, IApiRep apiRep)
         {
             this.dbcontext = dbcontext;
