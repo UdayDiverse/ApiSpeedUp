@@ -11,7 +11,7 @@ namespace ApiSpeedUp.Controllers
     public class ApiSpeedController : ControllerBase
     {
         private readonly travelDbContext dbcontext;
-        public IApiRep apiRep { get; set; }
+        private IApiRep apiRep { get; set; }
         public ApiSpeedController(travelDbContext dbcontext, IApiRep apiRep)
         {
             this.dbcontext = dbcontext;
